@@ -9,7 +9,9 @@ btn.addEventListener("click", function() {
     console.log("L'utente ha scritto: " + nameInput.value);
     console.log("L'utente ha scritto: " + kmInput);
     console.log("L'utente ha scritto: " + ageInput.value);
+    let price = (kmInput * kmtariff);
     if (ageInput.value=="senior") {
+        price = price * 0.6;
         console.log("Sei vecchio");
     } else if (ageInput.value=="underage") {
         console.log("Sei minorenne");
