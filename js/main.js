@@ -9,14 +9,13 @@ btn.addEventListener("click", function() {
     console.log("L'utente ha scritto: " + nameInput.value);
     console.log("L'utente ha scritto: " + kmInput.value);
     console.log("L'utente ha scritto: " + ageInput.value);
-    let price = (Number(kmInput.value) * kmtariff);
+    
     if (ageInput.value=="senior") {
-        price = price * 0.6;
-        console.log("Sei vecchio");
+        console.log((Number(kmInput.value) * kmtariff) * 0.6);
     } else if (ageInput.value=="underage") {
-        console.log("Sei minorenne");
+        console.log((Number(kmInput.value) * kmtariff) * 0.8);
     } else {
-        console.log("Sei adulto");
+        console.log(Number(kmInput.value) * kmtariff);
 
     }
 });
