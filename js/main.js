@@ -16,8 +16,15 @@ btn.addEventListener("click", function() {
         document.getElementById("codeCp").innerHTML = "92911";
         document.getElementById("priceId").innerHTML = ((Number(kmInput.value) * kmtariff) * 0.6).toFixed(2) + " €";
     } else if (ageInput.value=="underage") {
-        console.log((Number(kmInput.value) * kmtariff) * 0.8);
+        document.getElementById("discountId").innerHTML = "Sconto Under 18";
+        document.getElementById("carriage").innerHTML = "5";
+        document.getElementById("codeCp").innerHTML = "92911";
+        document.getElementById("priceId").innerHTML = ((Number(kmInput.value) * kmtariff) * 0.8).toFixed(2) + " €";
     } else {
+        document.getElementById("discountId").innerHTML = "Biglietto Standard";
+        document.getElementById("carriage").innerHTML = "5";
+        document.getElementById("codeCp").innerHTML = "92911";
+        document.getElementById("priceId").innerHTML = (Number(kmInput.value) * kmtariff).toFixed(2) + " €";
         console.log(Number(kmInput.value) * kmtariff);
 
     }
