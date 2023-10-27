@@ -15,25 +15,59 @@
     <section class="container bg-white rounded p-3 text-black w-50">
         <div class="row">
             <div class="col-auto m-auto text-center">
-                <label for="username">Nome e Cognome:</label>
-                <input type="text" name="username" id="username">
-                
-                <label for="kilometers">Km da percorrere</label>
-                <input type="number" name="kilometers" id="kilometers">
-                
-                <label for="age">Fascia d'età:</label>
-                <select id="ageselect" name="age">
-                    <option value="underage">Minorenne</option>
-                    <option value="adult">Adulto</option>
-                    <option value="senior">Over 65</option>
-                </select> <br>
-                
+                <div class="row">
+                    <div class="col">
+                        <label for="username">Nome e Cognome:</label>
+                        <input class="form-control mt-3" type="text" name="username" id="username">
+                    </div>
+                    <div class="col">
+                        <label for="kilometers">Km da percorrere</label>
+                        <input class="form-control mt-3" type="number" name="kilometers" id="kilometers">
+                    </div>
+                    <div class="col">
+                        <label for="age">Fascia d'età:</label> <br>
+                        <select class="form-select form-select-sm p-2 mt-3" aria-label="Small select example" id="ageselect" name="age">
+                            <option value="underage">Minorenne</option>
+                            <option value="adult">Adulto</option>
+                            <option value="senior">Over 65</option>
+                        </select>
+                    </div>
+                </div>
                 <button class="btn btn-primary border border-white mt-3" id="generateBtn">Genera</button>
                 <button class="btn btn-danger border border-white mt-3" id="abortBtn">Annulla</button>
+            </div>
+        </div>
+    </section>
+    <section class="container bg-white rounded p-3 text-black w-50 mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h4>DETTAGLIO PASSEGGERI</h4>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h5>NOME PASSEGGERO</h5>
+                    <p id="nameId"></p>
+                </div>
+                <div class="col-3">
+                    <h5>Offerta</h5>
+                    <p id="discountId"></p>
+                </div>
+                <div class="col-2">
+                    <h5>Carrozza</h5>
+                    <p id="carriageId"></p>
+                </div>
+                <div class="col-2">
+                    <h5>Codice CP</h5>
+                    <p id="codeId"></p>
+                </div>
+                <div class="col-2">
+                    <h5>Costo Biglietto</h5>
+                    <p id="priceId"></p>
+                </div>
 
             </div>
         </div>
-        
+
     </section>
     
     <script src="js/main.js"></script>
