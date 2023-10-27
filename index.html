@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto Treno Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <label for="username">Nome e Cognome:</label>
-    <input type="text" name="username" id="username">
-    
-    <label for="kilometers">Km da percorrere</label>
-    <input type="number" name="kilometers" id="kilometers">
-    
-    <label for="age">Fascia d'età:</label>
-    <select id="ageselect" name="age">
-        <option value="underage">Minorenne</option>
-        <option value="adult">Adulto</option>
-        <option value="senior">Over 65</option>
-    </select> <br>
-    
-    <button id="generateBtn">Genera</button>
-    <button id="abortBtn">Annulla</button>
+    <header>
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    </header>
+    <section class="container bg-white rounded p-3 text-black w-50">
+        <div class="row">
+            <div class="col-auto m-auto text-center">
+                <label for="username">Nome e Cognome:</label>
+                <input type="text" name="username" id="username">
+                
+                <label for="kilometers">Km da percorrere</label>
+                <input type="number" name="kilometers" id="kilometers">
+                
+                <label for="age">Fascia d'età:</label>
+                <select id="ageselect" name="age">
+                    <option value="underage">Minorenne</option>
+                    <option value="adult">Adulto</option>
+                    <option value="senior">Over 65</option>
+                </select> <br>
+                
+                <button class="btn btn-primary border border-white mt-3" id="generateBtn">Genera</button>
+                <button class="btn btn-danger border border-white mt-3" id="abortBtn">Annulla</button>
+
+            </div>
+        </div>
+        
+    </section>
     
     <script src="js/main.js"></script>
 </body>

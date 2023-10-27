@@ -5,6 +5,11 @@
 }
 
 body {
-    background-color: #333;
+    background-color: teal;
     color: white;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
 }
