@@ -14,11 +14,10 @@ btn.addEventListener("click", function() {
     const errorMsg = document.getElementById("errorMsg");
     
     if (document.getElementById("kilometers").value == "" || document.getElementById("kilometers").value == 0) {
-        errorMsg.style.display = "block";
-        errorMsg.innerHTML = "Controlla di aver inserito correttamente i dati.";
+        errorMsg.classList.remove("d-none");
         mainCon.style.display = "none";
     } else if (ageInput.value=="senior") {
-        errorMsg.style.display = "none";
+        errorMsg.classList.add("d-none");
         mainCon.style.display = "block";
         document.getElementById("nameId").innerHTML = nameInput.value;
         discount.innerHTML = "Sconto Over 65";
@@ -26,7 +25,7 @@ btn.addEventListener("click", function() {
         codeId.innerHTML = cpCode;
         priceId.innerHTML = ((Number(kmInput.value) * kmtariff) * 0.6).toFixed(2) + " €";
     } else if (ageInput.value=="underage") {
-        errorMsg.style.display = "none";
+        errorMsg.classList.add("d-none");
         mainCon.style.display = "block";
         document.getElementById("nameId").innerHTML = nameInput.value;
         discount.innerHTML = "Sconto Under 18";
@@ -35,7 +34,7 @@ btn.addEventListener("click", function() {
         priceId.innerHTML = ((Number(kmInput.value) * kmtariff) * 0.8).toFixed(2) + " €";
     } else {
         mainCon.style.display = "block";
-        errorMsg.style.display = "none";
+        errorMsg.classList.add("d-none");
         document.getElementById("nameId").innerHTML = nameInput.value;
         discount.innerHTML = "Biglietto Standard";
         carriageId.innerHTML = carriage;
